@@ -1,0 +1,540 @@
+body {
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex;
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+    font-size: 2ex;
+    color: #333;
+    background-color: white;
+    /*width: 1000px;*/
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+pre {
+    font-family: "Courier New", Courier, mono;
+
+    font-style: normal;
+    background-color: #FFFFFF;
+    white-space: pre
+}
+
+h1 {
+    margin: 1ex 0ex 1ex 0ex;
+    padding: 0ex;
+
+    line-height: 3ex;
+    font-weight: 900;
+    color: #666;
+}
+
+h2 {
+    margin: 2ex 0ex 1ex 0ex;
+    padding: 0ex;
+
+    line-height: 2ex;
+    font-weight: 700;
+    color: #444;
+}
+
+h3 {
+    margin: 1ex 0ex 1ex 0ex;
+    padding: 0ex;
+
+    line-height: 1.6ex;
+    font-weight: 700;
+    color: #222;
+}
+
+p {
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 2ex;
+}
+
+img {
+    border: 0;
+}
+
+li {
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex;
+}
+
+/*table{*/
+/*    border-width: 0;*/
+/*    empty-cells: show;*/
+/*    border-collapse: collapse; !* 合并边框 *!*/
+/*}*/
+
+table {
+    border-width: 0;
+    empty-cells: show;
+    border-collapse: collapse; /* 合并边框 */
+}
+
+
+/*td, th {*/
+/*    empty-cells: show;*/
+/*    padding: .3ex .3ex;*/
+/*    vertical-align: top;*/
+/*    text-align: left;*/
+/*    border-width: 0;*/
+/*    border-spacing: 0;*/
+/*    background-color: #ececec;*/
+
+/*}*/
+
+th {
+    font-weight: bold;
+    background-color: #e2e2e2;
+}
+
+
+tr{
+    background-color: #d3d3d3; /* 鼠标悬停时改变行背景色 */
+    /*background-color: #f4f4f4; !* 设置表格行背景色 *!*/
+}
+
+td {
+    border: 1px solid #ccc; /* 设置单元格边框 */
+    padding: 10px;           /* 内边距 */
+    text-align: center;      /* 文本居中 */
+}
+
+.header11{
+    background-color: #f4f4f4; /* 鼠标悬停时改变行背景色 */
+}
+
+tr:nth-child(1) {
+    /*background-color: #e2e2e2; !* 设置偶数行背景色 *!*/
+    background-color: #f4f4f4; /* 鼠标悬停时改变行背景色 */
+}
+
+tr:hover {
+    /*background-color: #d3d3d3; !* 鼠标悬停时改变行背景色 *!*/
+    background-color: #f4f4f4; /* 设置表格行背景色 */
+}
+
+a, a:visited, a:link {
+    color: #039;
+    text-decoration: none;
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+}
+
+a:hover {
+    color: #039;
+}
+
+a.Button, a.Button:link, a.Button:visited {
+    padding: .3ex;
+
+    text-decoration: none;
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+    font-size: 1.5ex;
+}
+
+a.Button:hover {
+    color: #000;
+
+}
+
+#Logo {
+    width: 33%;
+    height: 9ex;
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 0ex 0ex;
+    border-width: 0ex 0ex .3ex 0px;
+    border-style: solid;
+    border-color: #ccc;
+    float: left;
+    background-color: #000;
+    color: #fff;
+    line-height: 9ex;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: 9ex;
+
+
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body>#Logo {
+    height: 9ex;
+}
+
+#Menu {
+    width: 33%;
+    height: 9ex;
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 0ex 0ex;
+    border-width: 0ex 0ex .3ex 0px;
+    border-style: solid;
+    border-color: #ccc;
+    float: left;
+    background-color: #000;
+    color: #eaac00;
+    text-decoration: none;
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+    text-align: center;
+    line-height: 9ex;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: 9ex;
+}
+
+#Menu, #Menu a, #Menu a:link, #Menu a:visited, #Menu a:hover {
+    color: #eaac00;
+    text-decoration: none;
+    font-family: helvetica, tahoma, arial, verdana, sans-serif;
+}
+
+body>#Menu {
+    height: 9ex;
+}
+
+{
+}
+
+#Search {
+    width: 33%;
+    height: 9ex;
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 0ex 0ex;
+    border-width: 0ex 0ex .3ex 0px;
+    border-style: solid;
+    border-color: #ccc;
+    float: left;
+    text-align: center;
+    background-color: #000;
+    color: #eaac00;
+    line-height: 9ex;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: 9ex;
+}
+
+body>#Search {
+    height: 9ex;
+}
+
+/*#Search input {*/
+/*    border-width: .1ex .1ex .1ex .1ex;*/
+/*    border-style: solid;*/
+/*    border-color: #aaa;*/
+/*    background-color: #666;*/
+/*    color: #eaac00;*/
+/*}*/
+
+#QuickLinks {
+    text-align: center;
+    background-color: #FFF;
+    width: 99%;
+}
+
+.SelectedImg{
+    background-color: lightgray; /* 设置背景颜色 */
+    padding: 5px;
+}
+
+#PoweredBy {
+    width: 100%;
+    height: 9ex;
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 0ex 0ex;
+    border-width: .3ex 0ex .3ex 0px;
+    border-style: solid;
+    border-color: #ccc;
+    float: left;
+    background-color: #000;
+    color: #fff;
+    line-height: 9ex;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: 9ex;
+}
+
+body>#PoweredBy {
+    height: 9ex;
+}
+
+#Banner {
+    width: 69%;
+    height: 9ex;
+    margin: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 0ex 0ex;
+    border-width: .3ex 0ex .3ex 0px;
+    border-style: solid;
+    border-color: #ccc;
+    float: left;
+    background-color: #000;
+    color: #fff;
+    line-height: 9ex;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: 9ex;
+}
+
+body>#Banner {
+    height: 9ex;
+}
+
+#Content {
+    margin: 0;
+    padding: 0ex 0ex 0ex 0ex;
+    width: 99%;
+    color: #333;
+    background-color: #FFF;
+    border-width: 0;
+}
+
+#Separator {
+    clear:both;
+    margin: 0;
+    height:0;
+}
+
+#Main {
+    margin: 0;
+    padding: 1ex;
+    color: #333;
+    background-color: #FFF;
+    border-width: 1ex 0ex 2ex 0px;
+    border-style: solid;
+    border-color: #fff;
+}
+
+#Sidebar {
+    float: left;
+    background:inherit;
+    width: 30%;
+}
+
+#MainImage {
+    float: left;
+    background:inherit;
+    text-align:center;
+    width: 38%;
+}
+
+#Catalog {
+    padding: 1ex;
+    background:inherit;
+    text-align:center;
+    height: 60vh; /* 占满视口高度 */
+    place-items: center;
+
+}
+
+#Catalog2 {
+    padding: 1ex;
+    background:inherit;
+    text-align:center;
+    place-items: center;
+}
+
+
+#Search input[type="submit"]{
+    background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* 半透明边框 */
+    color: white;
+    padding: 12px 24px;
+    font-size: 12px;
+    border-radius: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* 文字阴影 */
+    backdrop-filter: blur(5px); /* 背景模糊效果 */
+    transition: 0.3s ease;
+}
+
+#Search input[type="submit"]:hover {
+    background-color: #eaac00;;
+}
+
+#Search input[type="text"]{
+    background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* 半透明边框 */
+    color: white;
+    padding: 12px 24px;
+    font-size: 12px;
+    border-radius: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* 文字阴影 */
+    backdrop-filter: blur(5px); /* 背景模糊效果 */
+    transition: 0.3s ease;
+}
+
+#Search input[type="text"]:hover{
+    transform: scale(1.1); /* 放大 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+
+
+#Catalog input[type="submit"]{
+    /*padding: .3ex;*/
+    /*color: #fff;*/
+    /*background-color: #005e21;*/
+    /*text-decoration: none;*/
+    /*font-family: helvetica, tahoma, arial, verdana, sans-serif;*/
+    /*font-size: 1.5ex;*/
+    /*border-width:0;*/
+
+    background-color: #4CAF50;  /* 背景颜色 */
+    color: white;               /* 字体颜色 */
+    padding: 10px 20px;         /* 内边距 */
+    border: none;               /* 去除边框 */
+    border-radius: 0;           /* 去除圆角，保持方形 */
+    font-size: 16px;            /* 字体大小 */
+    cursor: pointer;           /* 鼠标悬停时显示手型 */
+    text-align: center;         /* 居中文本 */
+    display: inline-block;      /* 按钮为行内块元素 */
+
+    /*background: rgba(255, 255, 255, 0.2); !* 半透明背景 *!*/
+    /*border: 1px solid rgba(255, 255, 255, 0.4); !* 半透明边框 *!*/
+    /*color: white;*/
+    /*padding: 12px 24px;*/
+    /*font-size: 16px;*/
+    /*border-radius: 10px;*/
+    /*text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); !* 文字阴影 *!*/
+    /*backdrop-filter: blur(5px); !* 背景模糊效果 *!*/
+    /*transition: 0.3s ease;*/
+}
+#Catalog input[type="submit"]:hover {
+    color: #000;
+    background-color: #54c07a;
+    cursor:pointer;
+}
+
+/*#Catalog table{*/
+/*    margin-left:auto;*/
+/*    margin-right:auto;*/
+/*}*/
+
+#BackLink{
+    padding: 1ex;
+    float: right;
+    border-width: .1ex 0ex .1ex 0px;
+    border-style: solid;
+    border-color: #000;
+}
+
+#Cart{
+    width: 69.99%;
+    float: left;
+    background-color:#fff;
+}
+
+#MyList{
+    width: 30%;
+    float: left;
+    background-color:#ccc;
+    text-align:left;
+}
+
+#productAutoComplete{
+    background: #82CAFF;
+    position: relative;
+    top: -29px;
+    left: 71px;
+    width: 189px;
+    display: none;
+
+}
+#productAutoList{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #aaa;
+}
+.productAutoItem{
+    list-style: none;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: left;
+    padding-left: 5px;
+    margin-top: 3px;
+    border-bottom: 1px solid #666;
+    color: #005e21;
+    cursor: pointer;
+}
+
+#tip {
+    white-space: nowrap; /* 防止长文本换行 */
+    overflow: hidden; /* 超出内容隐藏 */
+    text-overflow: ellipsis; /* 长文本显示省略号 */
+    border: 1px solid #ddd;
+    border-radius: 15px;  /* 圆角半径为15px */
+    box-sizing: border-box; /* 包括边框和内边距计算宽度 */
+}
+
+#tip-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product{
+    display: flex;
+    justify-content: space-around; /* 子元素横向等间距 */
+    align-items: center; /* 子元素垂直居中 */
+    height: 50vh; /* 占满视口高度 */
+    border: 1px solid #ccc;
+}
+
+#product-item{
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:20px;
+}
+
+#product-name,#product-description{
+    display: inline-block;
+    margin:0;
+}
+
+.product-description{
+    margin-left:30px;
+}
+
+.product-name{
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+
+.product-list2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2ex;
+}
+
+/*!* 每个 item 进行垂直排列，图片在上，名称在下 *!*/
+/*#product {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;  !* 将图片和名称居中 *!*/
+/*    width: 25%;  !* 可以根据需要调整宽度 *!*/
+/*    text-align: center;  !* 保证名称居中 *!*/
+/*}*/
+
+/*!* 图片样式 *!*/
+/*#product-image {*/
+/*    width: 100%;  !* 图片宽度填满容器 *!*/
+/*    height: auto;  !* 高度自适应 *!*/
+/*    border-radius: 5px;  !* 可选：添加圆角 *!*/
+/*    margin-bottom: 1ex;  !* 图片和名称之间的间距 *!*/
+/*}*/
+
+/*!* 名称样式 *!*/
+/*.item-name {*/
+/*    font-size: 1.5ex;  !* 设置名称字体大小 *!*/
+/*    color: #333;  !* 设置名称字体颜色 *!*/
+/*}*/

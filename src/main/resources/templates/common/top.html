@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Title</title>
+</head>
+<body>
+<div id="Header">
+
+    <div id="Logo">
+        <div id="LogoContent">
+            <a href="mainFrom"><img src="/images/logo-topbar.gif"/></a>
+        </div>
+    </div>
+
+    <div id="Menu">
+        <div id="MenuContent">
+            <a href="cartForm"><img align="middle" name="img_cart" src="/images/cart.gif"/></a>
+
+            <img align="middle" src="/images/separator.gif"/>
+            <c:if test="${sessionScope.loginAccount==null}">
+                <a href="signonForm">Sign In</a>
+                <img align="middle" src="/images/separator.gif"/>
+                <a href="registerForm">Register</a>
+                <img align="middle" src="/images/separator.gif"/>
+            </c:if>
+
+            <c:if test="${sessionScope.loginAccount!=null}">
+                <a href="#">Sign Out</a>
+                <img align="middle" src="/images/separator.gif"/>
+
+
+
+                <a href="logForm?type=viewlog&page=1">My Account</a>
+
+                <img align="middle" src="/images/separator.gif"/>
+            </c:if>
+
+
+            <a href="help.html">?</a>
+        </div>
+    </div>
+
+    <div id="Search">
+        <div id="SearchContent">
+            <form action="" method="post">
+                <input type="text" name="keyword" size="14" id="keyword">
+                <input type="submit" value="Search">
+            </form>
+            <div id="productAutoComplete">
+                <ul id="productAutoList">
+                    <%--                    <li class="productAutoItem">Amazon Parrot</li>--%>
+                    <%--                    <li class="productAutoItem">Labrador Retriever</li>--%>
+                    <%--                    <li class="productAutoItem">Golden Retriever</li>--%>
+                    <%--                    <li class="productAutoItem">Rattlesnake</li>--%>
+                    <%--                    <li class="productAutoItem">Tiger Shark</li>--%>
+                    <%--                    <li class="productAutoItem">Dalmation</li>--%>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="QuickLinks">
+
+        <a href="/catalog/viewCategory?categoryId=FISH" data-categoryId="BIRDS"><img src="/images/sm_fish.gif"/></a>
+        <img src="/images/separator.gif"/>
+
+        <a href="/catalog/viewCategory?categoryId=DOGS" data-categoryId="DOGS"><img src="/images/sm_dogs.gif"/></a>
+        <img src="/images/separator.gif"/>
+
+        <a href="/catalog/viewCategory?categoryId=REPTILES" data-categoryId="REPTILES"><img src="/images/sm_reptiles.gif"/></a>
+        <img src="/images/separator.gif"/>
+
+        <a href="/catalog/viewCategory?categoryId=CATS" data-categoryId="CATS"><img src="/images/sm_cats.gif"/></a>
+        <img src="/images/separator.gif"/>
+
+        <a href="/catalog/viewCategory?categoryId=BIRDS" data-categoryId="BIRDS"><img src="/images/sm_birds.gif"/></a>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

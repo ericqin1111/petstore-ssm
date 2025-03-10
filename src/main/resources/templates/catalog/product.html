@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
+        media="screen" />
+  <header th:replace="common/top"></header>
+
+</head>
+
+<body>
+<div id="BackLink">
+    <a href="/catalog/viewCategory?categoryId=${product.categoryId}">Return to</a>
+</div>
+
+<div id="Catalog">
+
+    <table>
+        <tr class="header">
+            <th>Item ID</th>
+            <th>Product ID</th>
+            <th>Description</th>
+            <th>List Price</th>
+            <th>&nbsp;</th>
+        </tr>
+        <th:block th:each="item1:${product.itemList}">
+            <tr>
+                <td>
+                    <a href=""><span th:text="${item1.itemId}">itemId</span></a>
+                </td>
+                <td th:text="${product.productId}">productId</td>
+                <td th:text="${item1.attribute1}">attribut1</td>
+                <td th:text="'$' + ${#numbers.formatDecimal(item1.listPrice, 1, 2)}"></td>
+                <td>
+                    <a href="addItemToCart?workingItemId=${item.itemId}&act=CART" class="Button">Add to Cart</a>
+                </td>
+            </tr>
+        </th:block>
+
+    </table>
+
+</div>
+
+
+
+
+<footer th:replace="common/bottom"></footer>
+</body>
+
+</html>
