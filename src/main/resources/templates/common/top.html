@@ -9,7 +9,7 @@
 
     <div id="Logo">
         <div id="LogoContent">
-            <a href="mainFrom"><img src="/images/logo-topbar.gif"/></a>
+            <a href="/catalog/index"><img src="/images/logo-topbar.gif"/></a>
         </div>
     </div>
 
@@ -18,14 +18,14 @@
             <a href="cartForm"><img align="middle" name="img_cart" src="/images/cart.gif"/></a>
 
             <img align="middle" src="/images/separator.gif"/>
-            <c:if test="${sessionScope.loginAccount==null}">
-                <a href="signonForm">Sign In</a>
+            <th:block th:if="${session.loginAccount==null}">
+                <a href="/account/loginForm">Sign In</a>
                 <img align="middle" src="/images/separator.gif"/>
-                <a href="registerForm">Register</a>
+                <a href="/account/reqRegister">Register</a>
                 <img align="middle" src="/images/separator.gif"/>
-            </c:if>
+            </th:block>
 
-            <c:if test="${sessionScope.loginAccount!=null}">
+            <th:block th:if="${session.loginAccount!=null}">
                 <a href="#">Sign Out</a>
                 <img align="middle" src="/images/separator.gif"/>
 
@@ -34,7 +34,7 @@
                 <a href="logForm?type=viewlog&page=1">My Account</a>
 
                 <img align="middle" src="/images/separator.gif"/>
-            </c:if>
+            </th:block>
 
 
             <a href="help.html">?</a>

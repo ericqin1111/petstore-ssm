@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
+          media="screen" />
+
+    <header th:replace="common/top"></header>
+</head>
+<body>
+<div id="Catalog">
+    <form th:action="@{/account/login}" method="post" th:object="${user}">
+        <p>Please enter your username and password.</p>
+        <p>Username:<input type="text" th:field="*{username}" ><br/>
+            Password:<input type="password" th:field="*{password}" ><br/>
+<!--            Captcha:<input type="text" th:field="*{vcode}"><br/>-->
+        </p>
+        <input type="submit" value="Login">
+    </form>
+    Need a user name and password?
+    <a th:href="@{/account/register}">Register Now</a>
+</div>
+
+
+
+<footer th:replace="common/bottom"></footer>
+</body>
+</html>

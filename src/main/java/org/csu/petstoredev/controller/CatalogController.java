@@ -1,5 +1,6 @@
 package org.csu.petstoredev.controller;
 
+import jakarta.servlet.http.HttpSession;
 import org.csu.petstoredev.service.CatalogService;
 import org.csu.petstoredev.vo.CategoryVO;
 import org.csu.petstoredev.vo.ProductVo;
@@ -38,4 +39,6 @@ public class CatalogController {
 
         return "catalog/product";
     }
+
+
 }
