@@ -13,7 +13,7 @@
 <body>
 <header th:replace="common/top"></header>
 <div id="BackLink">
-    <a th:href="@{/catalog/viewCategory?categoryId=${product.categoryId}}">Return to</a>
+    <a th:href="@{/catalog/viewCategory(categoryId=${product.categoryId})}">Return to</a>
 </div>
 
 <div id="Catalog">

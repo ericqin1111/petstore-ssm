@@ -45,7 +45,9 @@ public class CatalogServiceImpl implements CatalogService {
         QueryWrapper<Item> queryWrapper=new QueryWrapper<>();
         queryWrapper.eq("productId",productId);
         List<Item> itemList=itemMapper.selectList(queryWrapper);
+        String categoryId = productMapper.selectById(productId).getCategoryId();
 
+        productVo.setCategoryId(categoryId);
         productVo.setProductId(productId);
         productVo.setItemList(itemList);
 

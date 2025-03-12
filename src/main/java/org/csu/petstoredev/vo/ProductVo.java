@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 public class ProductVo {
+    private String categoryId;
     private String productId;
     private List<Item> itemList;
 }
