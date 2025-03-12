@@ -71,6 +71,11 @@
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
             <version>3.5.10.1</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.flywaydb.enterprise</groupId>-->
+<!--            <artifactId>flyway-core</artifactId>-->
+<!--            <version>9.0.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

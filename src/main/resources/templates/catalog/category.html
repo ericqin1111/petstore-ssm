@@ -6,9 +6,9 @@
 
     <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
           media="screen" />
-    <header th:replace="common/top"></header>
 </head>
 <body>
+<header th:replace="common/top"></header>
 <div id="Content">
 <div id="BackLink">
     <a href="/catalog/index">Return to Main Menu</a>
@@ -28,7 +28,7 @@
         <tr class="product-item" id="product-item">
 
             <td class="product-description">
-                <a th:href="@{/catalog/viewProduct?productId=${product1.productId}&act='VIEW'}">
+                <a th:href="@{/catalog/viewProduct(productId=${product1.productId},act='VIEW')}">
                     <span th:utext="${product1.productId}"></span>
                 </a>
             </td>
