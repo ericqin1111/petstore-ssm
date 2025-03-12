@@ -3,6 +3,7 @@ package org.csu.petstoredev.controller;
 
 import org.csu.petstoredev.form.User;
 import org.csu.petstoredev.persistence.UserMapper;
+import org.csu.petstoredev.service.AccountService;
 import org.csu.petstoredev.service.impl.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AccountController {
 
     @Autowired
-    AccountServiceImpl accountService;
+    AccountService accountService;
     @GetMapping("loginForm")
     public String loginForm(Model model){
         User user=new User();
@@ -29,7 +30,7 @@ public class AccountController {
     public String login(@ModelAttribute User user){
         System.out.println("我在login里");
         if(accountService.isUserExist(user.getUsername(),user.getPassword())){
-            return "/account/test";
+            return "redirect:/catalog/index";
         }
 
         return "demo1";

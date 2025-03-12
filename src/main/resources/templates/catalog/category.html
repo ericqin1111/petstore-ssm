@@ -19,16 +19,25 @@
     <h2 th:text="${category.categoryName}">Category Name</h2>
 </div>
 <div class="product" id="product">
-    <th:block th:each="product1 : ${category.productList}">
-        <div class="product-item" id="product-item">
-            <div class="product-description">
-                <a th:href="@{/catalog/viewProduct(productId=${product1.productId}, act='VIEW')}">
-                    <span th:utext="${product1.pic}"></span>
+    <table>
+    <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+    </tr>
+        <th:block th:each="product1 : ${category.productList}">
+        <tr class="product-item" id="product-item">
+
+            <td class="product-description">
+                <a th:href="@{/catalog/viewProduct?productId=${product1.productId}&act='VIEW'}">
+                    <span th:utext="${product1.productId}"></span>
                 </a>
-            </div>
-            <div class="product-name" th:text="${product1.name}"></div> <!-- 输出 description -->
-        </div>
-    </th:block>
+            </td>
+            <td class="product-name" th:text="${product1.name}"></td> <!-- 输出 description -->
+
+        </tr>
+        </th:block>
+        </table>
+
 </div>
 
 </div>
