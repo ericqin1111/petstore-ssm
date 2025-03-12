@@ -1,9 +1,8 @@
 package org.csu.petstoredev.controller;
 
-import jakarta.servlet.http.HttpSession;
 import org.csu.petstoredev.service.CatalogService;
 import org.csu.petstoredev.vo.CategoryVO;
-import org.csu.petstoredev.vo.ProductVo;
+import org.csu.petstoredev.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,7 +31,7 @@ public class CatalogController {
 
     @GetMapping("viewProduct")
     public String viewProduct(@RequestParam String productId,Model model){
-        ProductVo productVo=catalogService.getProduct(productId);
+        ProductVO productVo=catalogService.getProduct(productId);
         System.out.println("VPO:"+productVo.getProductId());
         System.out.println("VPO:"+productVo.getItemList());
         model.addAttribute("product",productVo);

@@ -9,7 +9,7 @@ import org.csu.petstoredev.persistence.ItemMapper;
 import org.csu.petstoredev.persistence.ProductMapper;
 import org.csu.petstoredev.service.CatalogService;
 import org.csu.petstoredev.vo.CategoryVO;
-import org.csu.petstoredev.vo.ProductVo;
+import org.csu.petstoredev.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,8 +39,8 @@ public class CatalogServiceImpl implements CatalogService {
         return categoryVO;
     }
 
-    public ProductVo getProduct(String productId){
-        ProductVo productVo=new ProductVo();
+    public ProductVO getProduct(String productId){
+        ProductVO productVo=new ProductVO();
 
         QueryWrapper<Item> queryWrapper=new QueryWrapper<>();
         queryWrapper.eq("productId",productId);

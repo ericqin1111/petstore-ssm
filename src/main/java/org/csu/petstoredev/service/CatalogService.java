@@ -1,10 +1,10 @@
 package org.csu.petstoredev.service;
 
 import org.csu.petstoredev.vo.CategoryVO;
-import org.csu.petstoredev.vo.ProductVo;
+import org.csu.petstoredev.vo.ProductVO;
 
 public interface CatalogService {
     public CategoryVO getCategory(String categoryId);
 
-    public ProductVo getProduct(String productId);
+    public ProductVO getProduct(String productId);
 }

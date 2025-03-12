@@ -7,7 +7,7 @@ import org.csu.petstoredev.entity.Item;
 import java.util.List;
 
 @Data
-public class ProductVo {
+public class ProductVO {
     private String categoryId;
     private String productId;
     private List<Item> itemList;

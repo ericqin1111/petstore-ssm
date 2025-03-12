@@ -8,6 +8,7 @@ import org.csu.petstoredev.form.User;
 import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface UserMapper extends BaseMapper<User> {
     @Select("select * from signon where username = #{username} And password = #{password}")
     public User selectByusrnameAndPsw(@Param("username") String username,@Param("password") String password);

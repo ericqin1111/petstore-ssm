@@ -1,0 +1,13 @@
+<div if="${!empty sessionScope.myList}">
+    <p>Pet Favorites <br />
+        Shop for more of your favorite pets here.</p>
+    <ul>
+        <th:block th:Each var="product" items="${session.myList}">
+            <li>
+                <a href="/cart/productForm?productId=${product.productId}">${product.name}</a>
+
+                (${product.productId})</li>
+        </th:block>
+    </ul>
+
+</div>
