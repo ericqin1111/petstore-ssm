@@ -1,10 +1,9 @@
 package org.csu.petstoredev.controller;
 
 
-import org.csu.petstoredev.form.User;
-import org.csu.petstoredev.persistence.UserMapper;
+import jakarta.servlet.http.HttpSession;
+import org.csu.petstoredev.vo.UserVO;
 import org.csu.petstoredev.service.AccountService;
-import org.csu.petstoredev.service.impl.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,15 +20,15 @@ public class AccountController {
     AccountService accountService;
     @GetMapping("loginForm")
     public String loginForm(Model model){
-        User user=new User();
+        UserVO user=new UserVO();
         model.addAttribute("user",user);
         return "/account/login";
     }
 
     @PostMapping("login")
-    public String login(@ModelAttribute User user){
+    public String login(@ModelAttribute UserVO user, HttpSession session){
         System.out.println("我在login里");
-        if(accountService.isUserExist(user.getUsername(),user.getPassword())){
+        if(accountService.isUserExist(session, user.getUsername(),user.getPassword())){
             return "redirect:/catalog/index";
         }
 

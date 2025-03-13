@@ -10,4 +10,17 @@ public class CartItemVO {
     private int quantity;
     private boolean inStock;
     private BigDecimal total;
+
+    public void incrementQuantity() {
+        quantity++;
+        calculateTotal();
+    }
+
+    public void calculateTotal() {
+        if (item != null && item.getListPrice() != null) {
+            total = item.getListPrice().multiply(new BigDecimal(quantity));
+        } else {
+            total = null;
+        }
+    }
 }

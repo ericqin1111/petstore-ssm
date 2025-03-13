@@ -10,5 +10,6 @@ import java.util.List;
 public class ProductVO {
     private String categoryId;
     private String productId;
+    private String name;
     private List<Item> itemList;
 }

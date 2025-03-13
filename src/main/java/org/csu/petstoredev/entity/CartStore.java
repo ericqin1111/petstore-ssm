@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+
+//储存不同用户的购物车信息
 @Data
 @TableName("cartstore")
 public class CartStore {
