@@ -27,7 +27,7 @@ public class AccountServiceImpl implements AccountService {
 
     public boolean isUsernameExist(String username){
         boolean exist=false;
-        User user=new User();
+        UserVO user=new UserVO();
         user=userMapper.selectByUsername(username);
         if(user==null){
             return exist;

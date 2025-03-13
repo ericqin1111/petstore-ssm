@@ -15,7 +15,7 @@ public interface UserMapper extends BaseMapper<UserVO> {
     public UserVO selectByusrnameAndPsw(@Param("username") String username, @Param("password") String password);
 
     @Select("select * from signon where username=#{username}")
-    public User selectByUsername(@Param("username") String username);
+    public UserVO selectByUsername(@Param("username") String username);
 
     @Insert("insert into signon(username,password) values (#{username},#{password})")
     public int insertToSignonUsrAndPsw(@Param("username") String username,@Param("password") String password);
