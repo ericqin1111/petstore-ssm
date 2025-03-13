@@ -16,7 +16,7 @@ public class DatabaseInit {
     @PostConstruct
     public void init() {
             jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS cartstore(" +
-                    "            username VARCHAR(25) PRIMARY KEY NOT NULL ," +
+                    "            username VARCHAR(25) NOT NULL ," +
                     "            itemid VARCHAR(10) NOT NULL," +
                     "            quantity INTEGER NOT NULL" +
                     "    );");

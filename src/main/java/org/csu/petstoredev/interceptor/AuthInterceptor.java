@@ -21,6 +21,8 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
+
         HttpSession session = request.getSession();
         UserVO user = (UserVO) session.getAttribute("user");
         if (user == null) {

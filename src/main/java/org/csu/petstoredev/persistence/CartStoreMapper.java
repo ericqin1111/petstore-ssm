@@ -8,8 +8,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface CartStoreMapper extends BaseMapper<CartStore> {
-    @Select("SELECT * FROM cartstore WHERE USERNAME = #{username}")
-    public CartStore getCartStoreByUsername(String username);
+
 
     @Delete("DELETE FROM cartstore WHERE USERNAME = #{username}")
     public void clearCartStoreByUsername(String username);
