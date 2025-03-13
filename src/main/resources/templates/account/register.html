@@ -7,7 +7,7 @@
     <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
           media="screen" />
 
-    <header th:replace="common/top"></header>
+    <header th:replace="~{common/top}"></header>
 </head>
 <body>
 
@@ -23,20 +23,18 @@
         <label for="password">Password:</label>
         <input type="password" th:field="*{password}" id="password"/><br/><br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label for="email">Email:</label>
-        <input type="text" th:field="*{email}" id="email"/><br/><br/>
+
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
             Captcha:<input type="text" name="vcode"/><br /><br /><img src="code" onclick="this.src='code?'+Math.random()"><br/><br/>
         </p>
 
 
-a
         <input type="submit" value="Register">
     </form>
 
 </div>
 
-<footer th:replace="common/bottom"></footer>
+<footer th:replace="~{common/bottom}"></footer>
 </body>
 </html>

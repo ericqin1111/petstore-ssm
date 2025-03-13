@@ -23,8 +23,25 @@ public class AccountServiceImpl implements AccountService {
         }
 
         return  exist;
-
     }
+
+    public boolean isUsernameExist(String username){
+        boolean exist=false;
+        User user=new User();
+        user=userMapper.selectByUsername(username);
+        if(user==null){
+            return exist;
+        }
+
+        exist=true;
+        return exist;
+    }
+
+    public void insertAccount(String username,String password){
+        userMapper.insertToSignonUsrAndPsw(username,password);
+        return;
+    }
+
 
 
 }

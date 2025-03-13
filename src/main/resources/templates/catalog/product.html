@@ -7,11 +7,13 @@
   <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
         media="screen" />
 
+  <header th:replace="~{common/top}"></header>
+
 
 </head>
 
 <body>
-<header th:replace="common/top"></header>
+
 <div id="BackLink">
     <a th:href="@{/catalog/viewCategory(categoryId=${product.categoryId})}">Return to</a>
 </div>
@@ -47,7 +49,7 @@
 
 
 
-<footer th:replace="common/bottom"></footer>
+<footer th:replace="~{common/bottom}"></footer>
 </body>
 
 </html>
