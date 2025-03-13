@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <title>Title</title>
+
+    <script src="/js/jquery.js"></script>
 </head>
 <body>
 <div id="Header">
@@ -21,12 +23,12 @@
             <th:block th:if="${session.loginAccount==null}">
                 <a href="/account/loginForm">Sign In</a>
                 <img align="middle" src="/images/separator.gif"/>
-                <a href="/account/reqRegister">Register</a>
+                <a href="/account/registerForm">Register</a>
                 <img align="middle" src="/images/separator.gif"/>
             </th:block>
 
             <th:block th:if="${session.loginAccount!=null}">
-                <a href="#">Sign Out</a>
+                <a href="/account/logout">Sign Out</a>
                 <img align="middle" src="/images/separator.gif"/>
 
 
@@ -37,7 +39,7 @@
             </th:block>
 
 
-            <a href="help.html">?</a>
+            <a href="/help.html">?</a>
         </div>
     </div>
 

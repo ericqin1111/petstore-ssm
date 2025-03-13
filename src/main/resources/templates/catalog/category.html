@@ -6,9 +6,11 @@
 
     <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
           media="screen" />
-</head>
+
+    <header th:replace="~{common/top}"></header>
+
 <body>
-<header th:replace="common/top"></header>
+
 <div id="Content">
 <div id="BackLink">
     <a href="/catalog/index">Return to Main Menu</a>
@@ -41,6 +43,6 @@
 </div>
 
 </div>
-<footer th:replace="common/bottom"></footer>
+<footer th:replace="~{common/bottom}"></footer>
 </body>
 </html>
