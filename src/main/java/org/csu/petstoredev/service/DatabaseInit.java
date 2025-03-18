@@ -20,6 +20,19 @@ public class DatabaseInit {
                     "            itemid VARCHAR(10) NOT NULL," +
                     "            quantity INTEGER NOT NULL" +
                     "    );");
+        jdbcTemplate.execute(
+                "create table if not exists item_order " +
+                        "(" +
+                        "    id  int auto_increment primary key ," +
+                        "    item_id   varchar(255)          null," +
+                        "    user_name   varchar(255)          null," +
+                        "    code     varchar(255) null," +
+                        "    add_time  datetime     null," +
+                        "    total    varchar(255) null," +
+                        "    is_delete int          null," +
+                        "    status   int          null," +
+                        "    check (`status` in (0, 1, 2, 3, 4))" +
+                        ")");
 
     }
 }
