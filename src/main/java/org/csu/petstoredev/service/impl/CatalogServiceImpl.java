@@ -5,6 +5,7 @@ import org.csu.petstoredev.entity.Category;
 import org.csu.petstoredev.entity.Item;
 import org.csu.petstoredev.entity.Product;
 import org.csu.petstoredev.persistence.CategoryMapper;
+import org.csu.petstoredev.persistence.InventoryMapper;
 import org.csu.petstoredev.persistence.ItemMapper;
 import org.csu.petstoredev.persistence.ProductMapper;
 import org.csu.petstoredev.service.CatalogService;
@@ -23,6 +24,10 @@ public class CatalogServiceImpl implements CatalogService {
     ProductMapper productMapper;
     @Autowired
     ItemMapper itemMapper;
+
+    @Autowired
+    InventoryMapper inventoryMapper;
+
     @Override
     public CategoryVO getCategory(String categoryId) {
         CategoryVO categoryVO=new CategoryVO();
@@ -47,9 +52,16 @@ public class CatalogServiceImpl implements CatalogService {
         List<Item> itemList=itemMapper.selectList(queryWrapper);
         String categoryId = productMapper.selectById(productId).getCategoryId();
 
+//        for(Item item:itemList){
+//            if (inventoryMapper.getInventoryByItemId(item.getItemId())[0].getQty() <= 0){
+//                itemList.remove(item);
+//            }
+//        }
+
         productVo.setCategoryId(categoryId);
         productVo.setProductId(productId);
         productVo.setItemList(itemList);
+
 
         return productVo;
     }

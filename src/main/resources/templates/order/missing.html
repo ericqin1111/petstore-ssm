@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>Title</title>
+  <link rel="StyleSheet" href="/css/mypetstore.css" type="text/css"
+        media="screen" />
+</head>
+<body>
+<header th:replace="common/top"></header>
+
+
+<div id="Catalog">
+
+    <table>
+      <tr>
+        <td>
+          <h2>Missing Items</h2>
+
+          <table>
+
+            <tr>
+              <td><b>Item ID</b></td>
+
+            </tr>
+
+            <th:block th:each="missItem:${missingItems.itemNames}">
+              <tr>
+                <td th:text="${missItem}"></td>
+              </tr>
+            </th:block>
+
+          </table>
+
+        <td>&nbsp;</td>
+
+      </tr>
+    </table>
+
+
+</div>
+
+
+
+
+
+
+<footer th:replace="common/bottom"></footer>
+</body>
+</html>

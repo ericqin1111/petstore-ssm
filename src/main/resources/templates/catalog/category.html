@@ -26,7 +26,7 @@
         <th>Product ID</th>
         <th>Name</th>
     </tr>
-        <th:block th:each="product1 : ${category.productList}">
+        <th:block th:each="product1 : ${category?.productList}">
         <tr class="product-item" id="product-item">
 
             <td class="product-description">
