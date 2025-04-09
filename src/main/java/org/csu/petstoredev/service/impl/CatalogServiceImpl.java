@@ -52,12 +52,6 @@ public class CatalogServiceImpl implements CatalogService {
         List<Item> itemList=itemMapper.selectList(queryWrapper);
         String categoryId = productMapper.selectById(productId).getCategoryId();
 
-//        for(Item item:itemList){
-//            if (inventoryMapper.getInventoryByItemId(item.getItemId())[0].getQty() <= 0){
-//                itemList.remove(item);
-//            }
-//        }
-
         productVo.setCategoryId(categoryId);
         productVo.setProductId(productId);
         productVo.setItemList(itemList);

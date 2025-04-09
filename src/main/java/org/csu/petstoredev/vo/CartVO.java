@@ -30,6 +30,19 @@ public class CartVO {
 
     }
 
+    public void addItem(ItemVO item, int quantity, boolean isInStock) {
+
+        CartItemVO cartItem = new CartItemVO();
+        cartItem.setItem(item);
+        cartItem.setQuantity(quantity);
+        cartItem.setInStock(isInStock);
+        itemMap.put(item.getItemId(), cartItem);
+        cartItems.add(cartItem);
+        numberOfItems++;
+
+
+    }
+
     public ItemVO removeItemById(String itemId) {
         CartItemVO cartItem = (CartItemVO) itemMap.remove(itemId);
         if (cartItem == null) {

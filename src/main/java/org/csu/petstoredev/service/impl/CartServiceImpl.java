@@ -105,7 +105,7 @@ public class CartServiceImpl implements CartService {
         for (CartStore cartStore : itemList) {
             String itemId = cartStore.getItemId();
             ItemVO item = itemMapper.getItemById(itemId);
-            cart.addItem(item, true);
+            cart.addItem(item, cartStore.getQuantity(),  true);
         }
     }
 
